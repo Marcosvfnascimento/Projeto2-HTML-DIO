@@ -1,0 +1,151 @@
+/* Estilo específico para a página de Contato */
+.content h3 {
+    text-align: center;
+    color: #2d3847;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding: 0;
+    margin-left: 20px;
+}
+
+/* Remover marcadores da lista e adicionar ícones */
+ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+ul li:before {
+    content: ''; /* Inicialmente vazio, será usado com ícones de fundo */
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+/* Ícones personalizados para cada tipo de contato */
+ul li.email:before {
+    background-image: url('../img/email-icon.png'); /* Ícone de email */
+}
+
+ul li.phone:before {
+    background-image: url('../img/phone-icon.png'); /* Ícone de telefone */
+}
+
+ul li.location:before {
+    background-image: url('../img/location-icon.png'); /* Ícone de localização */
+}
+
+ul li.social:before {
+    background-image: url('../img/social-icon.png'); /* Ícone de redes sociais */
+}
+
+/* Estilo para listas de contatos */
+ul li strong {
+    color: #ef2e34;
+    font-weight: bold;
+}
+
+ul li a {
+    color: #2d3847;
+    text-decoration: underline;
+}
+
+ul li a:hover {
+    color: #ef2e34;
+}
+
+/* Estilo para links de Redes Sociais */
+ul li ul {
+    margin-top: 10px;
+    padding-left: 40px;
+}
+
+ul li ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+ul li ul li:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+/* Ícones para cada rede social */
+ul li ul li.facebook:before {
+    background-image: url('../img/facebook-icon.png'); /* Ícone de Facebook */
+}
+
+ul li ul li.instagram:before {
+    background-image: url('../img/instagram-icon.png'); /* Ícone de Instagram */
+}
+
+ul li ul li.linkedin:before {
+    background-image: url('../img/linkedin-icon.png'); /* Ícone de LinkedIn */
+}
+
+/* Melhorando a estrutura do conteúdo de contatos */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.content ul {
+    width: 60%; /* Limita a largura da lista */
+}
+
+/* Estilo para a Tabela de Horários */
+.service-table {
+    width: 80%; /* Definindo uma largura padrão */
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-table th, .service-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    text-align: center;
+}
+
+.service-table th {
+    background-color: #2d3847;
+    color: white;
+    font-weight: bold;
+}
+
+.service-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.service-table tr:hover {
+    background-color: #ddd;
+}
+
+.service-table tbody tr td {
+    font-size: 16px;
+}
+
+/* Destacando células específicas */
+.service-table tbody tr td:nth-child(3) {
+    color: #ef2e34;
+    font-weight: bold;
+}
+
+/* Ícones */
+ul li:before, ul li ul li:before {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
