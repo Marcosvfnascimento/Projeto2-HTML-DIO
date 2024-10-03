@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcação de Consulta - SaveLife</title>
+    <link rel="stylesheet" href="style/marcar.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="menu-img">
+            <a href="#"><img class="image-logo" src="img/logo2.png" alt="logo SaveLife"></a> 
+        </div>
+        <!-- Conteúdo do Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre Nós</a></li>
+                <li><a href="horarios.html">Horários</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#">Marcação</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <!-- Conteúdo do Header -->
+            <h2>Marcação de Consultas</h2>
+        </div>
+
+        <div class="content">
+            <h3>Preencha o formulário para marcar sua consulta</h3>
+            <p>Escolha uma data e selecione um dos horários disponíveis conforme nossa tabela abaixo:</p>
+
+            <!-- Formulário de Marcação -->
+            <form class="appointment-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Data da Consulta:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Selecione o Horário:</label>
+                    <select id="time" name="time" required>
+                        <option value="" disabled selected>Escolha o horário...</option>
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descrição (opcional):</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Se houver alguma observação adicional..."></textarea>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="submit-button">Marcar Consulta</button>
+                    <button type="reset" class="reset-button">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 SaveLife - Todos os direitos reservados</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+/* Reset e estilo base */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    background-color: #2d3847;
+    font-family: Arial, sans-serif;
+}
+
+/* Menu lateral */
+.menu {
+    width: 200px;
+    height: 100vh;
+    background-color: #2d3847;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a:hover {
+    color: #ef2e34;
+}
+
+/* Logo no menu */
+.menu-img {
+    text-align: center;
+}
+
+.image-logo {
+    width: 100px;
+}
+
+/* Área principal */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #2d3847;
+}
+
+/* Header */
+.header {
+    background-color: #2d3847;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.header h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h2 i {
+    margin-left: 10px;
+}
+
+/* Conteúdo */
+.content {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+/* Estilização dos métodos de contato */
+.content h3 {
+    text-align: center;
+    color: #2d3847;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ul {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+ul li:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+/* Ícones personalizados para cada tipo de contato */
+ul li.phone:before {
+    background-image: url('../img/phone-icon.png');
+}
+
+ul li.email:before {
+    background-image: url('../img/email-icon.png');
+}
+
+ul li.location:before {
+    background-image: url('../img/location-icon.png');
+}
+
+ul li.social:before {
+    background-image: url('../img/social-icon.png');
+}
+
+ul li strong {
+    color: #ef2e34;
+}
+
+ul li a {
+    color: #2d3847;
+    text-decoration: underline;
+}
+
+ul li a:hover {
+    color: #ef2e34;
+}
+
+/* Estilo para redes sociais */
+ul li ul {
+    margin-top: 10px;
+    padding-left: 40px;
+}
+
+ul li ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+ul li ul li:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+/* Ícones para cada rede social */
+ul li ul li.facebook:before {
+    background-image: url('../img/facebook-icon.png');
+}
+
+ul li ul li.instagram:before {
+    background-image: url('../img/instagram-icon.png');
+}
+
+ul li ul li.linkedin:before {
+    background-image: url('../img/linkedin-icon.png');
+}
+
+/* Footer */
+.footer {
+    background-color: #2d3847;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.map-frame {
+    width: 70%;
+    margin: 20px auto;
+}
+
+/* Media queries para tornar a página responsiva */
+@media (max-width: 1024px) {
+    .menu {
+        width: 150px;
+    }
+
+    .image-logo {
+        width: 70px;
+    }
+
+    .header h2 {
+        font-size: 22px;
+    }
+
+    .content ul {
+        width: 80%;
+    }
+
+    .map-frame {
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        flex-direction: row;
+        position: relative;
+    }
+    .content {
+        margin-right: 0; /* Remove a margem direita em telas menores */
+        padding: 15px; /* Ajusta o padding para melhor visualização */
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+        flex-grow: 1;
+        background-color: white;
+    }
+
+    .image-logo {
+        width: 60px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .content ul {
+        width: 90%;
+    }
+
+    .map-frame {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .image-logo {
+        width: 50px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    h3, h2, p {
+        font-size: 16px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .content ul {
+        width: 100%;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+
+    .map-frame {
+        width: 100%;
+        height: 80px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image-logo {
+        width: 40px;
+    }
+
+    .header h2 {
+        font-size: 16px;
+    }
+
+    .content ul {
+        width: 100%;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+
+    .map-frame {
+        width: 100%;
+        height: 60px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+/* Estilos adicionais para o rodapé */
+.footer p {
+    margin: 0;
+    padding: 5px;
+}
+
+/* Estilização para botões de contato (opcional, caso queira adicionar botões de interação) */
+.button {
+    background-color: #ef2e34;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #c61f29;
+}
+
+/* Estilização adicional para o formulário de contato */
+form.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ef2e34;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #c61f29;
+}
